@@ -1,0 +1,8 @@
+{
+	"name" : "ramu",
+	"age"  : 27,
+	"sex"  : "male",
+	"occupation": "employed",
+	"course" : "sql admin",
+	"martialstatus" : "married"
+}

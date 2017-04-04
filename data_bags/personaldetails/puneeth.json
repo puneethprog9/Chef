@@ -1,0 +1,8 @@
+{
+	"name" : "puneeth",
+	"age"  : 26,
+	"sex"  : "male",
+	"occupation": "unemployed",
+	"course" : "devops,aws",
+	"martialstatus" : "single"
+}

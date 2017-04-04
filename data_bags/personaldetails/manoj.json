@@ -1,0 +1,8 @@
+{
+	"name" : "manoj",
+	"age"  : 26,
+	"sex"  : "male",
+	"occupation": "unemployed",
+	"course" : "orcle apps",
+	"martialstatus" : "single"
+}
