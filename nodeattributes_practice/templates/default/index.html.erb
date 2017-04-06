@@ -1,0 +1,10 @@
+<html>
+<body>
+    <p>This node is <%= node['hostname'] %>.This attribute is fetch from server</p>
+    <p>This  attribue is overwrite by role <%= node['nodeattribute']['greeting']%></p>
+    <p>This attribute is from attribue folder <%= node['nodeattribute']['nodeowner']%></p>
+    <p>we love <%= @site_name %></p>
+    <p>Served from <%= node['ipaddress']%>:<%= @port %></p>
+
+</body>      
+</html>
