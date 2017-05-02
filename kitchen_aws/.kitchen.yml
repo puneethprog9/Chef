@@ -1,0 +1,34 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: ChefAll
+  region: ap-south-1
+  availability_zone: a
+  subnet_id: subnet-dbad3db2
+  image_id: ami-cdbdd7a2
+  instance_type: t2.micro
+  security_group_ids: sg-12164f7b
+  retryable_tries: 120 
+
+provisioner:
+  name: chef_zero
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: Redhat
+transport:
+  ssh_key: C:\Users\Puneeth\.ssh\ChefAll.pem
+suites:
+  - name: default
+    run_list:
+      - recipe[kitchen_aws::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
